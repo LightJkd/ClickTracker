@@ -29,23 +29,19 @@ The recorded click delays are stored in microseconds to ensure high precision.
 
 ## Usage
 
-1. **Recording Clicks**:
+1. “**Recording Clicks**:
+ * Press 'J' to start recording. Click the left mouse button to record clicks.
+ * Press 'J' again to stop recording.”
 
-* Press 'J' to start recording. Click the left mouse button to record clicks.
-* Press 'J' again to stop recording.
+2. “**Replaying Clicks**:
+ * Press 'R' to start replaying recorded clicks.
+ * Press 'R' again to stop replaying.
 
-2. **Replaying Clicks**:
+3. “**Saving Clicks**:
+ * Press 'H' to save recorded clicks to clicks.txt.
 
-* Press 'R' to start replaying recorded clicks.
-* Press 'R' again to stop replaying.
-
-3. **Saving Clicks**:
-
-* Press 'H' to save recorded clicks to clicks.txt.
-
-4. **Loading Clicks**:
-
-Press 'L' to load clicks from clicks.txt.
+4. “**Loading Clicks**:
+ * Press 'L' to load clicks from clicks.txt.
 
 ## Contributing
 
