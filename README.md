@@ -2,6 +2,8 @@
 
 ClickTracker is a C++ program that records and replays mouse clicks. It allows users to save recorded clicks to a file and load them for replay. 
 
+### Please, install msys64 or msys32 before use for correct operation of the program
+
 ## Features
 
 - Record mouse clicks with precise timings.
