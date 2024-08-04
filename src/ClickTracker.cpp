@@ -16,7 +16,7 @@ atomic<int> clickCount(0);
 
 void recordClicks();
 void replayClicks();
-void saveDelaysToFile(const string& filename);
+void saveClicks(const string& filename);
 void loadDelaysFromFile(const string& filename);
 
 int main() {
@@ -54,7 +54,7 @@ int main() {
         }
 
         if (GetAsyncKeyState('H') & 0x8000) {
-            saveDelaysToFile("clicks.txt");
+            saveClicks("clicks.txt");
             cout << "Clicks saved to clicks.txt" << endl;
             this_thread::sleep_for(milliseconds(200));
         }
@@ -113,7 +113,7 @@ void replayClicks() {
     }
 }
 
-void saveDelaysToFile(const string& filename) {
+void saveClicks(const string& filename) {
     ofstream outFile(filename);
     if (!outFile.is_open()) {
         cerr << "Failed to open file for writing." << endl;
