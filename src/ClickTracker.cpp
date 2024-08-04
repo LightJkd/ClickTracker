@@ -17,7 +17,7 @@ atomic<int> clickCount(0);
 void recordClicks();
 void replayClicks();
 void saveClicks(const string& filename);
-void loadDelaysFromFile(const string& filename);
+void loadClicks(const string& filename);
 
 int main() {
     cout << "Press 'J' to start/stop recording clicks." << endl;
@@ -60,7 +60,7 @@ int main() {
         }
 
         if (GetAsyncKeyState('L') & 0x8000) {
-            loadDelaysFromFile("clicks.txt");
+            loadClicks("clicks.txt");
             cout << "Clicks loaded from clicks.txt" << endl;
             this_thread::sleep_for(milliseconds(200));
         }
@@ -127,7 +127,7 @@ void saveClicks(const string& filename) {
     outFile.close();
 }
 
-void loadDelaysFromFile(const string& filename) {
+void loadClicks(const string& filename) {
     ifstream inFile(filename);
     if (!inFile.is_open()) {
         cerr << "Failed to open file for reading." << endl;
